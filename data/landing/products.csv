@@ -1,0 +1,51 @@
+product_id,product_name,category,brand,price,created_at
+1,iPhone 16,Smartphones,Apple,1099.99,2024-09-26
+2,Galaxy S26,Smartphones,Samsung,999.99,2025-01-30
+3,Google Pixel 10,Smartphones,Google,949.99,2025-09-20
+4,Xiaomi 16 Pro,Smartphones,Xiaomi,799.99,2025-03-08
+5,OnePlus 14,Smartphones,OnePlus,849.99,2024-10-11
+6,MacBook Air M5,Laptops,Apple,1499.99,2025-04-09
+7,ThinkPad X1 Carbon,Laptops,Lenovo,1799.99,2026-01-15
+8,Dell XPS 14,Laptops,Dell,1699.99,2025-07-18
+9,HP Spectre x360,Laptops,HP,1599.99,2025-11-05
+10,ASUS Zenbook 14,Laptops,ASUS,1399.99,2026-06-05
+11,iPad Pro 13,Tablets,Apple,1299.99,2025-11-02
+12,Galaxy Tab S11,Tablets,Samsung,999.99,2026-05-25
+13,Xiaomi Pad 8,Tablets,Xiaomi,599.99,2024-11-16
+14,Lenovo Tab Extreme,Tablets,Lenovo,749.99,2025-03-27
+15,Surface Pro,Tablets,Microsoft,1399.99,2025-05-08
+16,AirPods Pro,Headphones,Apple,279.99,2025-11-02
+17,WH-1000XM6,Headphones,Sony,449.99,2025-12-08
+18,QC Ultra,Headphones,Bose,429.99,2025-05-09
+19,Momentum 4,Headphones,Sennheiser,349.99,2024-08-16
+20,Nothing Ear,Headphones,Nothing,149.99,2024-09-10
+21,UltraFine 5K,Monitors,LG,1299.99,2026-03-15
+22,Odyssey G9,Monitors,Samsung,1499.99,2026-02-14
+23,ProArt PA32,Monitors,ASUS,999.99,2025-08-24
+24,UltraSharp U3225,Monitors,Dell,899.99,2025-06-09
+25,ThinkVision P32,Monitors,Lenovo,799.99,2024-09-05
+26,PlayStation 5 Pro,Gaming,Sony,799.99,2025-04-11
+27,Nintendo Switch 2,Gaming,Nintendo,469.99,2026-08-03
+28,Xbox Series X,Gaming,Microsoft,549.99,2025-11-03
+29,ROG Ally X,Gaming,ASUS,899.99,2024-09-15
+30,Steam Deck OLED,Gaming,Valve,679.99,2024-10-02
+31,MX Master 3S,Keyboards & Mice,Logitech,99.99,2025-04-08
+32,MX Keys S,Keyboards & Mice,Logitech,119.99,2025-06-30
+33,DeathAdder V4,Keyboards & Mice,Razer,89.99,2025-04-12
+34,Huntsman V3,Keyboards & Mice,Razer,199.99,2024-12-24
+35,Magic Keyboard,Keyboards & Mice,Apple,199.99,2025-03-04
+36,Apple Watch Ultra 3,Smartwatches,Apple,899.99,2026-01-12
+37,Galaxy Watch 8,Smartwatches,Samsung,449.99,2025-02-01
+38,Pixel Watch 4,Smartwatches,Google,399.99,2025-10-05
+39,Garmin Fenix 8,Smartwatches,Garmin,999.99,2026-07-08
+40,Huawei Watch GT 6,Smartwatches,Huawei,299.99,2025-07-29
+41,Alpha A7 V,Cameras,Sony,2499.99,2026-06-04
+42,EOS R6 II,Cameras,Canon,2399.99,2025-03-25
+43,Z6 III,Cameras,Nikon,2299.99,2026-04-06
+44,X-T6,Cameras,Fujifilm,1999.99,2026-01-24
+45,Lumix S5 II,Cameras,Panasonic,1899.99,2025-09-19
+46,Echo Show 10,Smart Home,Amazon,249.99,2026-02-16
+47,Nest Hub Max,Smart Home,Google,229.99,2025-08-12
+48,HomePod,Smart Home,Apple,349.99,2025-08-13
+49,Hue Starter Kit,Smart Home,Philips,199.99,2025-07-24
+50,Ring Doorbell Pro,Smart Home,Ring,249.99,2025-11-04

@@ -1,0 +1,101 @@
+customer_id,first_name,last_name,email,country,city,registration_date,status
+2,Patrick,Miller,randall56@example.org,French Polynesia,Port Veronicaville,2026-08-05,ACTIVE
+3,Kimberly,Walsh,lbryant@example.net,Algeria,North Steven,2026-08-05,ACTIVE
+4,Angela,Valencia,smithjohn@example.org,Yemen,Lake Williamside,2026-08-05,ACTIVE
+5,Erin,White,cynthiatownsend@example.org,Finland,Annashire,2026-08-05,ACTIVE
+6,Nicole,Swanson,fpatel@example.org,Congo,South Ashleyport,2026-08-05,ACTIVE
+7,Amy,Hill,allisonspence@example.net,Portugal,Debraport,2026-08-05,ACTIVE
+8,Anthony,Combs,annasimpson@example.org,Ecuador,East Larry,2026-08-05,ACTIVE
+9,Michelle,Beasley,penny59@example.net,Guinea-Bissau,Hunterfurt,2026-08-05,ACTIVE
+10,Jack,Choi,noahbradley@example.com,Palestinian Territory,Coxburgh,2026-08-05,ACTIVE
+11,Lindsey,Robinson,lindsey79@example.org,Montserrat,West Eddie,2026-08-05,ACTIVE
+12,Marie,Mccoy,allison44@example.net,Holy See (Vatican City State),Jessicamouth,2026-08-05,ACTIVE
+13,Jessica,Garcia,vcurtis@example.net,Honduras,Scottborough,2026-08-05,ACTIVE
+14,David,Taylor,alfredday@example.org,Aruba,Lake Stacy,2026-08-05,ACTIVE
+15,John,White,brandipetersen@example.org,Lithuania,Martinfort,2026-08-05,ACTIVE
+16,Victoria,Cook,zpaul@example.net,Anguilla,Port Katherine,2026-08-05,ACTIVE
+17,Timothy,Ellison,coreyshelton@example.org,South Georgia and the South Sandwich Islands,Adkinschester,2026-08-05,ACTIVE
+18,Shawna,Frazier,richard33@example.net,Poland,Elizabethberg,2026-08-05,ACTIVE
+19,Dominique,White,nshaw@example.org,Marshall Islands,Lake Elizabethmouth,2026-08-05,ACTIVE
+20,John,Hoffman,iwerner@example.org,Eritrea,Lake Lauren,2026-08-05,ACTIVE
+21,Kara,Lutz,joneswilliam@example.net,Bahrain,Port Nancyshire,2026-08-05,ACTIVE
+22,Denise,Collins,douglaspeck@example.org,Central African Republic,Santiagofurt,2026-08-05,ACTIVE
+23,Mike,Walker,kathryn26@example.org,Tuvalu,Jeffreyburgh,2026-08-05,ACTIVE
+24,Patricia,Price,gatesallison@example.net,Saint Pierre and Miquelon,West Mary,2026-08-05,ACTIVE
+25,Jeffery,Rodriguez,wdavid@example.org,Saint Martin,Dianaville,2026-08-05,ACTIVE
+26,Michael,Robbins,wirwin@example.com,Iran,Perrybury,2026-08-05,ACTIVE
+27,Kristine,Black,cynthiaadams@example.net,Malta,Katherineland,2026-08-05,ACTIVE
+28,Madison,Haney,jerrymaddox@example.com,Argentina,North Samantha,2026-08-05,ACTIVE
+29,Zachary,Rodriguez,taterodney@example.net,Vanuatu,South Andrewburgh,2026-08-05,ACTIVE
+30,Robert,Roberts,qjones@example.net,Dominican Republic,East Markfort,2026-08-05,ACTIVE
+31,Robert,Smith,jessica18@example.com,Jordan,West Julietown,2026-08-05,ACTIVE
+32,Theresa,Wilson,uaguilar@example.com,Austria,North Michael,2026-08-05,ACTIVE
+33,Kimberly,Jordan,flopez@example.com,Haiti,Hudsonmouth,2026-08-05,ACTIVE
+34,Theodore,Lewis,patrickbaldwin@example.net,Faroe Islands,Marquezhaven,2026-08-05,ACTIVE
+35,Sharon,Cisneros,benjamin70@example.net,Denmark,Randystad,2026-08-05,ACTIVE
+36,Melissa,Watson,marissa58@example.net,Anguilla,Sandrastad,2026-08-05,ACTIVE
+37,Shannon,Park,dorseykevin@example.org,Saint Helena,Knoxmouth,2026-08-05,ACTIVE
+38,Kyle,Delacruz,jacqueline98@example.net,British Indian Ocean Territory (Chagos Archipelago),North Angelicaland,2026-08-05,ACTIVE
+39,Cameron,Merritt,kerrtiffany@example.com,Bulgaria,Edwardmouth,2026-08-05,ACTIVE
+40,Karen,Adams,donaldsmith@example.net,Reunion,North Markmouth,2026-08-05,ACTIVE
+41,Michelle,Lewis,yallen@example.net,Anguilla,Michaelview,2026-08-05,ACTIVE
+42,Rebecca,Shaw,bethany26@example.com,Solomon Islands,Deannamouth,2026-08-05,ACTIVE
+43,Tina,May,christopher36@example.net,Jordan,Josephside,2026-08-05,ACTIVE
+44,Phyllis,Thompson,charlesboyd@example.org,French Guiana,New April,2026-08-05,ACTIVE
+45,Johnathan,Smith,amy80@example.net,Solomon Islands,Webbmouth,2026-08-05,ACTIVE
+46,Mark,Donaldson,hickspatrick@example.org,Zimbabwe,West Victoria,2026-08-05,ACTIVE
+47,Tami,Cook,qwall@example.com,Somalia,Port Vincenttown,2026-08-05,ACTIVE
+48,Joshua,Frank,rachelgilbert@example.net,Faroe Islands,South Brycefort,2026-08-05,ACTIVE
+49,Mackenzie,Graham,nobrien@example.com,Heard Island and McDonald Islands,West Larry,2026-08-05,ACTIVE
+50,Michael,Guerrero,michellesmith@example.com,Netherlands,New John,2026-08-05,ACTIVE
+51,Sarah,Irwin,jessica61@example.net,Palestinian Territory,Elizabethland,2026-08-05,ACTIVE
+52,John,Gray,hendersonlatoya@example.com,Algeria,Lake Katherinemouth,2026-08-05,ACTIVE
+53,Michael,Tucker,simmonskevin@example.com,Isle of Man,Schultzmouth,2026-08-05,ACTIVE
+54,Felicia,Davis,tanya45@example.net,French Southern Territories,New Brentbury,2026-08-05,ACTIVE
+55,Jennifer,Payne,kevin92@example.org,Saudi Arabia,New Brittany,2026-08-05,ACTIVE
+56,Renee,Franklin,xstanley@example.net,Malawi,Miguelmouth,2026-08-05,ACTIVE
+57,Gary,Fowler,lisa68@example.com,Turkmenistan,East Patrick,2026-08-05,ACTIVE
+58,Jose,Fleming,gregorymarks@example.com,Palau,Paulborough,2026-08-05,ACTIVE
+59,Jordan,Miller,manderson@example.org,Lebanon,Williamsmouth,2026-08-05,ACTIVE
+60,Taylor,Brooks,clarkjacob@example.com,Madagascar,Port Cindy,2026-08-05,ACTIVE
+61,Elizabeth,Daniels,natalieprice@example.com,Pitcairn Islands,Christineport,2026-08-05,ACTIVE
+62,Nichole,Adkins,tiffany31@example.com,Gibraltar,Jamesborough,2026-08-05,ACTIVE
+63,Julie,Miranda,sharon39@example.net,Guyana,Rickyside,2026-08-05,ACTIVE
+64,Jill,Bates,tmoran@example.net,Croatia,Port Davidtown,2026-08-05,ACTIVE
+65,Jared,Miller,david42@example.org,Ethiopia,Waynefurt,2026-08-05,ACTIVE
+66,Lindsey,Banks,mcmillanmark@example.org,Lithuania,South Jenniferton,2026-08-05,ACTIVE
+67,Stacey,Barnett,rcarter@example.com,Somalia,West Maria,2026-08-05,ACTIVE
+68,David,Ritter,zbrown@example.com,Nauru,Perryport,2026-08-05,ACTIVE
+69,Joseph,Diaz,aneal@example.net,South Africa,East Jamieland,2026-08-05,ACTIVE
+70,Donna,Griffin,thayes@example.org,Lebanon,Stewartfort,2026-08-05,ACTIVE
+71,Bryan,Kelly,morgan18@example.net,Algeria,South Jeffreyfort,2026-08-05,ACTIVE
+72,Brianna,Moyer,susan10@example.org,Jordan,Port Melissa,2026-08-05,ACTIVE
+73,Jacqueline,Myers,stacy30@example.net,Antarctica (the territory South of 60 deg S),South Jeffrey,2026-08-05,ACTIVE
+74,Linda,Foster,gutierrezricardo@example.org,Indonesia,South Kariville,2026-08-05,ACTIVE
+75,Amanda,George,tdyer@example.org,Chile,North Annaberg,2026-08-05,ACTIVE
+76,David,Montes,john07@example.org,Brazil,North Brandon,2026-08-05,ACTIVE
+77,Courtney,Shannon,cheryl19@example.com,Hungary,Gabrielaside,2026-08-05,ACTIVE
+78,Krista,Adams,debramccarthy@example.com,Brazil,Lake John,2026-08-05,ACTIVE
+79,Robin,Nichols,georgelee@example.com,Somalia,Sharonchester,2026-08-05,ACTIVE
+80,Ashley,Dunn,toddcarlson@example.com,Bolivia,Hendrixfort,2026-08-05,ACTIVE
+81,Nancy,Wright,millererica@example.net,Falkland Islands (Malvinas),Samuelview,2026-08-05,ACTIVE
+82,Jason,Mitchell,jefferywoods@example.org,Syrian Arab Republic,West Julietown,2026-08-05,ACTIVE
+83,Ashley,Mcgrath,andrew07@example.net,China,Hendrixmouth,2026-08-05,ACTIVE
+84,Jacqueline,Barker,donald32@example.org,Andorra,Boonemouth,2026-08-05,ACTIVE
+85,Tiffany,Krause,gharris@example.org,Trinidad and Tobago,South Victorshire,2026-08-05,ACTIVE
+86,Kristine,Love,tammy52@example.com,Hungary,Meyerston,2026-08-05,ACTIVE
+87,William,Hansen,sean89@example.net,Malaysia,East Anthony,2026-08-05,ACTIVE
+88,Robert,Cruz,bennettmatthew@example.com,Kazakhstan,New Brittany,2026-08-05,ACTIVE
+89,Matthew,Weber,jacobgood@example.com,South Georgia and the South Sandwich Islands,New Debra,2026-08-05,ACTIVE
+90,James,Davis,carterlinda@example.org,Reunion,Fieldsbury,2026-08-05,ACTIVE
+91,Laurie,Morgan,andrewpotter@example.net,Solomon Islands,East Lori,2026-08-05,ACTIVE
+92,Juan,Li,glennwatson@example.org,Cocos (Keeling) Islands,Laurenview,2026-08-05,ACTIVE
+93,Deborah,Eaton,ichavez@example.org,Falkland Islands (Malvinas),West Michelle,2026-08-05,ACTIVE
+94,Linda,Rodriguez,chad28@example.com,Albania,North Johnview,2026-08-05,ACTIVE
+95,John,Wright,copelandsydney@example.net,Saint Barthelemy,Jacksontown,2026-08-05,ACTIVE
+96,Melissa,Dickerson,theresa20@example.com,Cyprus,North Sarahfurt,2026-08-05,ACTIVE
+97,Diane,Rice,danielcole@example.org,Montenegro,Clarktown,2026-08-05,ACTIVE
+98,Melanie,Gilbert,jonesrandy@example.com,Moldova,Lake Thomasborough,2026-08-05,ACTIVE
+99,Timothy,Sullivan,jfowler@example.net,Lao People's Democratic Republic,Victorshire,2026-08-05,ACTIVE
+100,Justin,Chambers,freemanwanda@example.com,South Africa,Lake Patrick,2026-08-05,ACTIVE
+101,Joel,Schneider,edwardsjessica@example.com,Turkmenistan,Luisport,2026-08-05,ACTIVE
