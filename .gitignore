@@ -11,3 +11,5 @@ __pycache__/
 # VS Code
 .vscode/
 
+# Metadata generada por pip al instalar el paquete en modo editable (pip install -e .)
+*.egg-info/
