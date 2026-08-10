@@ -1,7 +1,8 @@
 import logging
 
-from pyspark.sql import SparkSession
+from spark.session import spark
 from pyspark.sql.functions import col
+
 
 from src.config.schemas import SCHEMAS
 from src.config.tables import TABLES
@@ -11,11 +12,6 @@ from src.utils import logger
 logger = logging.getLogger(__name__)
 
 
-spark = (
-    SparkSession.builder
-    .appName("Retail Data Platform")
-    .getOrCreate()
-)
 
 
 def process_table(table_name):
