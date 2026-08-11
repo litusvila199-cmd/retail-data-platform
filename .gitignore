@@ -14,5 +14,7 @@ __pycache__/
 # Metadata generada por pip al instalar el paquete en modo editable (pip install -e .)
 *.egg-info/
 
-# Datos procesados generados por Spark
+# Datos generados por el pipeline
+data/landing/
 data/processed/
+data/curated/
