@@ -1,3 +1,4 @@
+from datetime import timedelta
 from airflow.sdk import dag, task
 
 from src.ingestion.extract import extract_table 
@@ -14,21 +15,33 @@ from src.config.tables import TABLES
 
 def retail_pipeline():
 
-    @task
+    @task(
+        retries=2,
+        retry_delay=timedelta(seconds=10)
+    )
     def extract():
         for table in TABLES:
             extract_table(table)
 
-    @task
+    @task(
+            retries=2,
+            retry_delay=timedelta(seconds=10)
+    )
     def process():
         for table in TABLES:
             process_table(table)
 
-    @task
+    @task(
+            retries=2,
+            retry_delay=timedelta(seconds=10)
+    )
     def sales():
         generate_sales()
 
-    @task
+    @task(
+            retries=2,
+            retry_delay=timedelta(seconds=10)
+    )
     def customer_analytics():
         generate_customer_analytics()
 
