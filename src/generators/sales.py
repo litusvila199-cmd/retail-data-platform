@@ -1,6 +1,6 @@
 from pyspark.sql.functions import col
 from spark.session import spark
-
+from src.aws.s3 import upload_directory_to_s3
 
 def generate_sales():
 
@@ -59,4 +59,9 @@ def generate_sales():
 
     sales.write.mode("overwrite").parquet(
         "data/curated/sales.parquet"
+    )
+
+    upload_directory_to_s3(
+        "data/curated/sales.parquet",
+        "retail/curated/sales.parquet"
     )
