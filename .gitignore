@@ -18,3 +18,13 @@ __pycache__/
 data/landing/
 data/processed/
 data/curated/
+
+#Script para conecrase a airflow
+start_airflow.sh
+
+# Airflow local files
+airflow/airflow.cfg
+airflow/airflow.db
+airflow/airflow.db-*
+airflow/logs/
+airflow/simple_auth_manager_passwords.json.generated

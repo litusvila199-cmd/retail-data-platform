@@ -3,15 +3,13 @@ import logging
 from spark.session import spark
 from pyspark.sql.functions import col
 
-
+from src.aws.s3 import upload_directory_to_s3
 from src.config.schemas import SCHEMAS
 from src.config.tables import TABLES
 from src.utils import logger
 
 
 logger = logging.getLogger(__name__)
-
-
 
 
 def process_table(table_name):
@@ -47,7 +45,6 @@ def process_table(table_name):
         # Si hay menos filas únicas que filas originales,
         # significa que existen duplicados.
         if total_rows != unique_rows:
-
             logger.warning(
                 f"{table_name} contains "
                 f"{total_rows - unique_rows} duplicate rows."
@@ -95,16 +92,17 @@ def process_table(table_name):
             f"{table_name} saved as Parquet"
         )
 
-    except Exception:
+        # Subimos el Parquet procesado a S3.
+        upload_directory_to_s3(
+            f"data/processed/{table_name}.parquet",
+            f"retail/processed/{table_name}.parquet"
+        )
 
+    except Exception:
         logger.exception(
             f"Error processing table: {table_name}"
         )
-
-        # Los errores técnicos sí hacen fallar
-        # el procesamiento.
         raise
-
 
 if __name__ == "__main__":
 

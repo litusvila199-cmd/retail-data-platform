@@ -2,6 +2,7 @@ from pyspark.sql.functions import count, sum, max
 
 from spark.session import spark
 
+from src.aws.s3 import upload_directory_to_s3
 
 def generate_customer_analytics():
 
@@ -90,4 +91,9 @@ def generate_customer_analytics():
 
     customer_analytics.write.mode("overwrite").parquet(
         "data/curated/customer_analytics.parquet"
+    )
+
+    upload_directory_to_s3(
+        "data/curated/customer_analytics.parquet",
+        "retail/curated/customer_analytics.parquet"
     )
