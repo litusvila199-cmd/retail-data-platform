@@ -1,10 +1,11 @@
 # Retail Data Platform
 
-End-to-end Data Engineering pipeline built with Python, PostgreSQL, Pandas, PySpark, Apache Airflow and AWS S3.
+Pipeline de Data Engineering de extremo a extremo construido con Python, PostgreSQL, Pandas, PySpark, Apache Airflow y AWS S3.
 
-The project extracts data from a PostgreSQL database, processes and validates it with Apache Spark, generates curated analytical datasets and stores the different data layers locally and in Amazon S3.
+El proyecto extrae datos de una base de datos PostgreSQL, los procesa y valida con Apache Spark, genera datasets analíticos curados y almacena las diferentes capas de datos tanto localmente como en Amazon S3.
 
-## Architecture
+## Arquitectura
+
 ```text
                     PostgreSQL
                         │
@@ -12,41 +13,42 @@ The project extracts data from a PostgreSQL database, processes and validates it
                  Apache Airflow
                         │
                         ▼
-                    Extract
+                     Extract
                         │
-              ┌─────────┴─────────┐
-              ▼                   ▼
-       data/landing/       AWS S3 / landing
+             ┌──────────┴──────────┐
+             ▼                     ▼
+      data/landing/        AWS S3 / landing
           CSV files
-              │
-              ▼
+             │
+             ▼
         Apache Spark
          Processing
-              │
-              ├───────────────────┐
-              ▼                   ▼
-      data/processed/      AWS S3 / processed
+             │
+             ├───────────────────┐
+             ▼                   ▼
+      data/processed/     AWS S3 / processed
           Parquet
-              │
-              ▼
-         Data Generation
+             │
+             ▼
+        Data Generation
        ┌───────┴────────┐
        ▼                ▼
-    Sales       Customer Analytics
-     │                │
-     └───────┬────────┘
-             ▼
-         data/curated/
-            Parquet
-               │
+     Sales       Customer Analytics
+       │                │
+       └───────┬────────┘
                ▼
+          data/curated/
+             Parquet
+                │
+                ▼
           AWS S3 / curated
+```
 
+## Pipeline
 
-Pipeline
+El pipeline completo está orquestado con Apache Airflow:
 
-The complete pipeline is orchestrated with Apache Airflow:
-
+```text
 extract
    ↓
 process
@@ -54,96 +56,123 @@ process
 sales
    ↓
 customer_analytics
-1. Extract
+```
 
-Data is extracted from PostgreSQL using Python and Pandas.
+### 1. Extract
 
-The extracted tables are saved as CSV files in:
+Los datos se extraen de PostgreSQL utilizando Python y Pandas.
 
+Las tablas extraídas se guardan como archivos CSV en:
+
+```text
 data/landing/
+```
 
-The CSV files are also uploaded to Amazon S3:
+Los archivos CSV también se suben a Amazon S3:
+
+```text
 s3://<bucket>/retail/landing/
+```
 
-2. Process
+### 2. Process
 
-Apache Spark reads the CSV files from the landing layer and applies the corresponding schemas.
+Apache Spark lee los archivos CSV de la capa landing y aplica los esquemas correspondientes.
 
-The processing stage performs several data quality checks:
+La etapa de procesamiento realiza varias comprobaciones de calidad de datos:
 
-Checks for empty datasets
-Detects duplicate rows
-Removes duplicate rows
-Detects NULL values
-Writes the processed data as Parquet
+- Comprueba si los datasets están vacíos.
+- Detecta filas duplicadas.
+- Elimina filas duplicadas.
+- Detecta valores NULL.
+- Escribe los datos procesados en formato Parquet.
 
-The processed datasets are stored locally in:
+Los datasets procesados se almacenan localmente en:
 
+```text
 data/processed/
+```
 
-and uploaded to:
+y se suben a:
 
+```text
 s3://<bucket>/retail/processed/
-3. Sales Dataset
+```
 
-The pipeline combines the following datasets:
+### 3. Sales Dataset
 
+El pipeline combina los siguientes datasets:
+
+```text
 orders
 order_items
 products
+```
 
-to create a curated sales dataset.
+para crear un dataset curado de ventas.
 
-The resulting dataset contains information such as:
+El dataset resultante contiene información como:
 
-order
-customer
-product
-category
-quantity
-unit price
-total amount
+- pedido
+- cliente
+- producto
+- categoría
+- cantidad
+- precio unitario
+- importe total
 
-The dataset is stored in:
+El dataset se almacena en:
 
+```text
 data/curated/sales.parquet/
+```
 
-and uploaded to:
+y se sube a:
 
+```text
 s3://<bucket>/retail/curated/
-4. Customer Analytics
+```
 
-The pipeline generates customer-level analytical data using:
+### 4. Customer Analytics
 
+El pipeline genera datos analíticos a nivel de cliente utilizando:
+
+```text
 customers
 orders
 sales
+```
 
-The resulting dataset contains metrics such as:
+El dataset resultante contiene métricas como:
 
-number of orders
-last order date
-total amount spent
+- número de pedidos
+- fecha del último pedido
+- importe total gastado
 
-The dataset is stored in:
+El dataset se almacena en:
 
+```text
 data/curated/customer_analytics.parquet/
+```
 
-and uploaded to Amazon S3.
+y se sube a Amazon S3.
 
-Technologies
-Python
-PostgreSQL
-Pandas
-PySpark
-Apache Spark
-Apache Airflow
-AWS S3
-Boto3
-Git
-GitHub
-python-dotenv
-Project Structure
+## Tecnologías
+
+- Python
+- PostgreSQL
+- Pandas
+- PySpark
+- Apache Spark
+- Apache Airflow
+- AWS S3
+- Boto3
+- Git
+- GitHub
+- python-dotenv
+
+## Estructura del proyecto
+
+```text
 retail-data-platform/
 │
 ├── airflow/
@@ -186,41 +215,59 @@ retail-data-platform/
 ├── pyproject.toml
 ├── requirements.txt
 └── README.md
-Data Layers
+```
 
-The project uses three logical data layers.
+## Capas de datos
 
-Landing
+El proyecto utiliza tres capas lógicas de datos.
 
-Contains the data extracted from PostgreSQL in CSV format.
+### Landing
 
+Contiene los datos extraídos de PostgreSQL en formato CSV.
+
+```text
 data/landing/
+```
 
-and:
+y:
 
+```text
 S3: retail/landing/
-Processed
+```
 
-Contains data processed and validated with Apache Spark and stored in Parquet format.
+### Processed
 
+Contiene los datos procesados y validados con Apache Spark y almacenados en formato Parquet.
+
+```text
 data/processed/
+```
 
-and:
+y:
 
+```text
 S3: retail/processed/
-Curated
+```
 
-Contains analytical datasets generated from the processed data.
+### Curated
 
+Contiene los datasets analíticos generados a partir de los datos procesados.
+
+```text
 data/curated/
+```
 
-and:
+y:
 
+```text
 S3: retail/curated/
-AWS S3 Structure
+```
 
-The S3 bucket is organized into the same logical layers:
+## Estructura de AWS S3
 
+El bucket de S3 está organizado siguiendo las mismas capas lógicas:
+
+```text
 retail/
 │
 ├── landing/
@@ -240,51 +287,63 @@ retail/
 └── curated/
     ├── sales.parquet/
     └── customer_analytics.parquet/
-Configuration
+```
 
-Sensitive configuration is stored using environment variables and is not committed to the repository.
+## Configuración
 
-Example:
+La configuración sensible se almacena mediante variables de entorno y no se incluye en el repositorio.
 
+Ejemplo:
+
+```text
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=retail
 DB_USER=your_user
 DB_PASSWORD=your_password
 
-
 S3_BUCKET_NAME=your-bucket
 AWS_REGION=eu-west-1
+```
 
-AWS credentials are managed through the AWS CLI rather than being stored directly in the project.
+Las credenciales de AWS se gestionan mediante AWS CLI en lugar de almacenarse directamente en el proyecto.
 
-Installation
+## Instalación
 
-Create and activate a virtual environment:
+Crea y activa un entorno virtual:
 
+```bash
 python -m venv .venv
 source .venv/bin/activate
+```
 
-Install the project dependencies:
+Instala las dependencias del proyecto:
 
+```bash
 pip install -r requirements.txt
+```
 
-Configure the required environment variables using .env.
+Configura las variables de entorno necesarias utilizando `.env`.
 
-Make sure PostgreSQL and AWS credentials are available.
+Asegúrate de que PostgreSQL y las credenciales de AWS estén disponibles.
 
-Running the Pipeline
+## Ejecución del Pipeline
 
-Start Apache Airflow:
+Inicia Apache Airflow:
 
+```bash
 airflow standalone
+```
 
-Open the Airflow web interface and trigger:
+Abre la interfaz web de Airflow y ejecuta:
 
+```text
 retail_pipeline
+```
 
-The DAG executes the following tasks sequentially:
+El DAG ejecuta las siguientes tareas de forma secuencial:
 
+```text
 extract
    ↓
 process
@@ -292,55 +351,60 @@ process
 sales
    ↓
 customer_analytics
+```
 
-Each task is configured with retries to handle temporary failures.
+Cada tarea está configurada con reintentos para gestionar errores temporales.
 
-Logging and Error Handling
+## Logging y gestión de errores
 
-The project includes logging throughout the pipeline.
+El proyecto incluye logging a lo largo de todo el pipeline.
 
-The pipeline handles situations such as:
+El pipeline gestiona situaciones como:
 
-PostgreSQL extraction errors
-Empty datasets
-Duplicate records
-NULL values
-Spark processing errors
-S3 upload errors
+- Errores durante la extracción desde PostgreSQL.
+- Datasets vacíos.
+- Registros duplicados.
+- Valores NULL.
+- Errores durante el procesamiento con Spark.
+- Errores durante la subida a S3.
 
-Airflow retries failed tasks according to the configured retry policy.
+Airflow vuelve a ejecutar las tareas que fallan de acuerdo con la política de reintentos configurada.
 
-AWS Integration
+## Integración con AWS
 
-AWS S3 is integrated using Boto3.
+AWS S3 está integrado mediante Boto3.
 
-The project uses two upload functions:
+El proyecto utiliza dos funciones de subida:
 
+```python
 upload_file_to_s3()
+```
 
-for individual files such as CSV files, and:
+para archivos individuales como los archivos CSV, y:
 
+```python
 upload_directory_to_s3()
+```
 
-for the directories generated by Spark when writing Parquet datasets.
+para los directorios generados por Spark al escribir datasets en formato Parquet.
 
-This allows the same pipeline to maintain local data layers while also storing the data in an AWS S3 data lake structure.
+Esto permite que el mismo pipeline mantenga las capas de datos localmente y, al mismo tiempo, almacene los datos en una estructura de data lake en AWS S3.
 
-Purpose
+## Objetivo
 
-This project was created as a practical Data Engineering portfolio project demonstrating an end-to-end data pipeline.
+Este proyecto se ha creado como un proyecto práctico de Data Engineering para portfolio, demostrando la construcción de un pipeline de datos de extremo a extremo.
 
-It covers:
+El proyecto cubre:
 
-Data extraction from PostgreSQL
-ETL processing
-Data quality checks
-PySpark transformations
-Parquet
-Data layers
-Analytical dataset generation
-Apache Airflow orchestration
-AWS S3 integration
-Cloud data lake concepts
-Logging and error handling
-Git and GitHub
+- Extracción de datos desde PostgreSQL.
+- Procesamiento ETL.
+- Comprobaciones de calidad de datos.
+- Transformaciones con PySpark.
+- Formato Parquet.
+- Capas de datos.
+- Generación de datasets analíticos.
+- Orquestación con Apache Airflow.
+- Integración con AWS S3.
+- Conceptos de data lake en la nube.
+- Logging y gestión de errores.
+- Git y GitHub.
