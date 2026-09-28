@@ -2,7 +2,40 @@
 
 Pipeline de Data Engineering de extremo a extremo construido con Python, PostgreSQL, Pandas, PySpark, Apache Airflow y AWS S3.
 
-El proyecto extrae datos de una base de datos PostgreSQL, los procesa y valida con Apache Spark, genera datasets analíticos curados y almacena las diferentes capas de datos tanto localmente como en Amazon S3.
+El proyecto incluye la creación de una base de datos relacional en PostgreSQL que actúa como sistema de origen, y el desarrollo de un pipeline de datos encargado de extraer, procesar, validar y transformar esta información.
+
+Los datos procesados se organizan en diferentes capas y se almacenan tanto localmente como en Amazon S3.
+
+## Sistema de origen
+
+Como parte del proyecto se creó una base de datos relacional en PostgreSQL que actúa como sistema de origen del pipeline.
+
+La base de datos está estructurada en diferentes tablas relacionadas que representan las principales entidades de un entorno retail, como clientes, productos, pedidos, líneas de pedido, pagos y envíos.
+
+Los datos se generan mediante scripts de Python y se almacenan en PostgreSQL.
+
+Posteriormente, `retail-data-platform` utiliza esta base de datos como fuente para iniciar el proceso ETL, extrayendo los datos y procesándolos mediante las diferentes etapas del pipeline.
+
+El sistema de origen y el pipeline forman conjuntamente el flujo de datos completo:
+
+```text
+Base de datos relacional PostgreSQL
+              │
+              ▼
+       Retail Data Platform
+              │
+              ▼
+           Extract
+              │
+              ▼
+      Data Processing
+              │
+              ▼
+      Curated Datasets
+              │
+              ▼
+          Amazon S3
+```
 
 ## Arquitectura
 
@@ -394,8 +427,12 @@ Esto permite que el mismo pipeline mantenga las capas de datos localmente y, al 
 
 Este proyecto se ha creado como un proyecto práctico de Data Engineering para portfolio, demostrando la construcción de un pipeline de datos de extremo a extremo.
 
+El proyecto incluye tanto la creación del sistema de origen relacional en PostgreSQL como el desarrollo del pipeline de Data Engineering encargado de procesar y transformar sus datos.
+
 El proyecto cubre:
 
+- Creación de una base de datos relacional en PostgreSQL.
+- Generación de datos para el sistema de origen.
 - Extracción de datos desde PostgreSQL.
 - Procesamiento ETL.
 - Comprobaciones de calidad de datos.
